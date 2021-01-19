@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+Challenge chapter 03-24 github-user-search
+==========================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Statement of this challenge
+---------------------------
 
-## Available Scripts
+Create a \ *** new \ *** ReactJS project, containing a search
+user interface integrating with ** Github ** API.
+This challenge involves some of the main concepts passed until now:
 
-In the project directory, you can run:
+-   Create the layout following a Figma prototype
 
-### `npm start`
+-   Get and screen Github's information from an API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   Loaders https://skeletonreact.com
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   Forms
 
-### `npm test`
+-   Routes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```create-react-app```, using the * TypeScript * template:
 
-### `npm run build`
+```npx create-react-app github-user-search --template typescript```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-------------------------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Figma guide link: https://www.figma.com/file/NzeGEIb5oSAGtbu2BfvhDS/BDS-Cap3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-------------------------------
 
-### `npm run eject`
+The Github API for the challenge is: https://api.github.com/users/USERNAME
+where \ "** USERNAME ** \", must be the user name of the developer.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-------------------------------
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The \ "Loaders \" components have already been created and are available at
+https://github.com/devsuperior/dscatalog-resources/tree/master/frontend-web/cap03/desafio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-------------------------------
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Format the date of \"* Member since * \"
+that exists in the layout is an extra challenge. Once it has not been shown during 
+the classes yet, this formatting ** is not mandatory. ** So, any delivery containing
+the standard value returned by the Github API is valid (i.e., * 2013-10-19T16: 11: 46Z) *.
 
-## Learn More
+Despite not being mandatory, Devsuperior recommends the developer find out how to do that
+and also using the super simple library to do this task: https://github.com/iamkun/dayjs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This challenge is not very complex, so DevSuperior does not recommend the ** Bootstrap **.
+The CSS in Figma design is enough to complete the challenge. It is a great chance for the
+developer to practice CSS skills \ "pure \" without the help of Bootstrap.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+App Routes:
+-----------
+
+1.  \"/\" - Home app
+
+2.  \"/search\" - User profile search
+
+How DevSuperior will evaluate this challenge?
+---------------------------------------------
+
+### 1) Project execution
+
+The teacher should be able to make a simple clone of the project in the
+Github, install the dependencies (NPM or YARN) and run the application.
+
+### 2) Browser tests
+
+The teacher will do a simple test on the application, which will be to navigate
+to the search user route, and then type a user name in the box search, and check
+that the information is appearing correctly.
+
+It is valid to mention that the application does not have to be \ "* pixel-perfect * \" (size
+in pixel of all elements exactly to Figma). On the other hand, it must be the closest as possible.
+Font colors and sizes, for example, should be exactly those of Figma.
