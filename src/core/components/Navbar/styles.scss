@@ -5,6 +5,9 @@
     padding-left: 40px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav-logo-text {
@@ -13,5 +16,4 @@
     font-size: 24px;
     line-height: 32px;
     color: #FFF;
-    text-decoration: none;
 }

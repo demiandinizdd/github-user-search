@@ -1,9 +1,12 @@
 import React from 'react';
 import ButtonApp from 'core/components/ButtonApp';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const email = <p className="email-text">antforfigma@gmail.com</p>;
+    //Also can use tag <a href> and inplement mailto, if desired
+    //const email = <a className="email-text" href="mailto:antforfigma@gmail.com"> antforfigma@gmail.com</a>;
+    const email = <span className="email-text">antforfigma@gmail.com</span>;
 
     return (
         <div>
@@ -18,9 +21,9 @@ const Home = () => {
                 Este design foi adaptado a partir de Ant Design System for Figma, de <br />
                 Mateusz Wierzbicki: {email}
             </p>
-            <div className="button-alignment">
+            <Link to="/search" className="button-alignment">
                 <ButtonApp text = "Começar"/>
-            </div>
+            </Link>
         </div>
     );
 };
