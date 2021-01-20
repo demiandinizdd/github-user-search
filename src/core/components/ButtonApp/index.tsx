@@ -3,11 +3,12 @@ import './styles.scss';
 
 type Props = {
     text: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const ButtonApp = ({ text }: Props) => (
-    <button className="btn-area">
-        <h4 className="btn-text">{text}</h4>
+const ButtonApp = ({ text, onClick }: Props) => (
+    <button className="button-area" onClick = {onClick}>
+        <h4 className="button-text">{text}</h4>
     </button>
 );
 

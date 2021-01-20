@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -18,22 +18,16 @@ a:link {
   }
 }
 
-.form-card-base {
-  margin: 55px 100px 0 100px;
-  width: 1250px;
-  height: 270px;
-  align-content: center;
-  justify-content: center;
-  background: #E6F7FF;
-  border-radius: 16px;
+textarea:focus, input:focus{
+  outline: none;
 }
 
-.info-card-base {
-  margin: 55px 100px 73px 100px;
-  width: 1250px;
-  height: 390px;
-  align-content: center;
-  justify-content: center;
-  background: #F5F5F5;
-  border-radius: 8px;
+button:hover, button:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }

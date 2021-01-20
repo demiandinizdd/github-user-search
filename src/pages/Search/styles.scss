@@ -1,0 +1,33 @@
+.find-profile-container{
+    width: auto;
+    height: 270px;
+    border-radius: 16px;
+    background: #E6F7FF;
+    margin: 115px 100px 55px 100px;
+    padding-top: 66px;
+    padding-left: 94px;
+}
+
+.find-user-container{
+    margin-bottom: 15px;
+}
+
+.find-user-lable{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    color: #262626;
+}
+
+.find-user{
+    width: auto;
+    height: 40px;
+    margin-top: 12px;
+}
+
+.loader-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
