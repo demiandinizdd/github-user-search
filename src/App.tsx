@@ -1,10 +1,11 @@
 import React from 'react';
+import Routes from 'Routes';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello App github-user-search!</h1>
+    <div>
+      <Routes />
     </div>
   );
 }
