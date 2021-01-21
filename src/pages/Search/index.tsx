@@ -7,14 +7,17 @@ import { makeRequest } from 'core/utils/request';
 import './styles.scss';
 import ImageLoader from './components/Loaders/ImageLoader';
 
-const showBackground = () => {
+var searchResultShowed = false;
+
+const showLoadingBackground = (displayType: string) => {
     const background = document.getElementsByClassName('loader-background');
 
     for (let i = 0; i < background.length; i++) {
-        const loader = background[i];
+        const loading = background[i];
 
-        if (loader instanceof HTMLElement) {
-            loader.style.display = "flex";
+        if (loading instanceof HTMLElement) {
+            loading.style.display = displayType;
+            (displayType === "none") ? searchResultShowed = false : searchResultShowed = true;
             return true;
         }
     }
@@ -27,17 +30,21 @@ const Search = () => {
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(event.target.value);
+        if (searchResultShowed) {
+            showLoadingBackground("none");
+        }
     }
 
     const handleOnClick = () => {
         setIsLoading(true);
-        showBackground();
+        showLoadingBackground("flex");
         makeRequest({ method: 'GET', url: `/${userName}` })
         .then(response => {
             setProfile(response.data)
         })
         .catch(error => {
-            alert("Usuário não encontrado.")
+            alert("Usuário não encontrado.");
+            showLoadingBackground("none");
         })
         .finally(() => {
             setIsLoading(false)
@@ -59,7 +66,7 @@ const Search = () => {
                 </div>
                 <ButtonApp text="Encontrar" onClick={handleOnClick} />
             </div>
-            <div className="loader-content loader-background">
+            <div className="loader-background">
                 {
                     isLoading ? <ImageLoader /> : <> </>
                 }
