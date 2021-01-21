@@ -10,7 +10,7 @@ type ProfileProps = {
 
 const Profile = ({ profile }: ProfileProps) => (
     <div className="profile-container">
-        <div className="profile-image">
+        <div className="profile-view">
             <img 
                 src={profile.avatar_url}
                 className="profile-image" 
@@ -29,8 +29,8 @@ const Profile = ({ profile }: ProfileProps) => (
                 <li>{`Seguidores: ${profile.followers}`} </li>
                 <li>{`Seguindo: ${profile.following}`}  </li>
             </ul>
-            <div className="profile-info-container">
-                <h1 className="profile-info-title">Informações</h1>
+            <div className="profile-container-info">
+                <h1 className="profile-title-info">Informações</h1>
                 <input readOnly type="text" className="profile-input" value={`Empresa: ${profile.company}  `}></input>
                 <input readOnly type="text" className="profile-input" value={`Website/Blog: ${profile.blog} `} />
                 <input readOnly type="text" className="profile-input" value={`Localidade: ${profile.location} `} />

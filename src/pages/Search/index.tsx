@@ -7,6 +7,19 @@ import { makeRequest } from 'core/utils/request';
 import './styles.scss';
 import ImageLoader from './components/Loaders/ImageLoader';
 
+const showBackground = () => {
+    const background = document.getElementsByClassName('loader-background');
+
+    for (let i = 0; i < background.length; i++) {
+        const loader = background[i];
+
+        if (loader instanceof HTMLElement) {
+            loader.style.display = "flex";
+            return true;
+        }
+    }
+};
+
 const Search = () => {
     const [userName, setUserName] = useState('');
     const [profile, setProfile] = useState<GitHubProfile>();
@@ -18,9 +31,13 @@ const Search = () => {
 
     const handleOnClick = () => {
         setIsLoading(true);
+        showBackground();
         makeRequest({ method: 'GET', url: `/${userName}` })
         .then(response => {
             setProfile(response.data)
+        })
+        .catch(error => {
+            alert("Usuário não encontrado.")
         })
         .finally(() => {
             setIsLoading(false)
@@ -35,14 +52,14 @@ const Search = () => {
                     <input 
                         type="text"
                         value={userName}
-                        className="find-user"
+                        className="find-user-text"
                         placeholder="Usuário Github"
                         onChange={handleOnChange}
                     />
                 </div>
                 <ButtonApp text="Encontrar" onClick={handleOnClick} />
             </div>
-            <div className="loader-content">
+            <div className="loader-content loader-background">
                 {
                     isLoading ? <ImageLoader /> : <> </>
                 }
