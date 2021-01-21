@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonApp from 'core/components/ButtonApp';
 import { GitHubProfile } from 'core/types/GitHubProfile';
 import './styles.scss';
+import dayjs from 'dayjs';
 
 type ProfileProps = {
     profile: GitHubProfile
@@ -33,7 +34,7 @@ const Profile = ({ profile }: ProfileProps) => (
                 <input readOnly type="text" className="profile-input" value={`Empresa: ${profile.company}  `}></input>
                 <input readOnly type="text" className="profile-input" value={`Website/Blog: ${profile.blog} `} />
                 <input readOnly type="text" className="profile-input" value={`Localidade: ${profile.location} `} />
-                <input readOnly type="text" className="profile-input" value={`Membro desde: ${profile.created_at} `} />
+                <input readOnly type="text" className="profile-input" value={`Membro desde: ${dayjs(profile.created_at).format('DD/MM/YYYY')} `} />
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@ const Search = () => {
                     <input 
                         type="text"
                         value={userName}
-                        className="form-control find-user"
+                        className="find-user"
                         placeholder="Usuário Github"
                         onChange={handleOnChange}
                     />
