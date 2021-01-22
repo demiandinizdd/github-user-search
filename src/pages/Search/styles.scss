@@ -1,13 +1,13 @@
 .find-profile-container {
     border-radius: 16px;
     background: #E6F7FF;
-    margin: 115px 100px 55px 100px;
-    padding: 65px 95px 40px 95px;
-    align-items:flex-start;
+    margin: 7% 5% 2% 5%;
+    padding: 1.5% 1.5% 1.5% 7%;
+    align-items: center;
 }
 
 .find-user-container {
-    margin-bottom: 15px;
+    margin-bottom: 1%;
 }
 
 .find-user-lable {
@@ -18,20 +18,20 @@
 }
 
 .find-user-text {
-    width: 90% ;
+    width: 93.2% ;
     height: 40px;
-    margin-top: 12px;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
     font-size: 16px;
     line-height: 24px;
-    color: #BFBFBF;
+    color: #000;
 }
 
 .loader-background {
-    height: 335px;
+    height: 70%;
     background: #F5F5F5;
     border-radius: 8px;
-    margin: 0 100px 55px 100px;
-    padding: 40px 25px 35px 25px;
+    margin: 3% 5% 0% 5%;
     justify-content: center;
     align-items: center;
     display: none;
